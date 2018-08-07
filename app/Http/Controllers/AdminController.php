@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Form;
+use App\FormGratifikasi;
+use App\FormBenturan;
 
 class AdminController extends Controller
 {
@@ -23,7 +26,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('adminResources.dashboard');
+        $post = Form::all();
+        $grat = FormGratifikasi::all();
+        $ben = FormBenturan::all();
+
+        return view('adminResources.dashboard', compact('post', 'grat', 'ben'));
     }
 
     public function back(){
