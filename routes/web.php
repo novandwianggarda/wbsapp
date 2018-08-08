@@ -33,6 +33,13 @@ Route::prefix('admin')->group(function () {
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+
+    //korupsi
+    Route::get('/manage_korupsi', 'admin\ManageKorupsiController@showKorupsi')->name('manage.korupsi');
+    //gratifikasi
+    Route::get('/manage_gratifikasi', 'admin\ManageGratifikasiController@showGratifikasi')->name('manage.gratifikasi');
+    //benturan kepentingan
+    Route::get('/manage_benturan', 'admin\ManageBenturanController@showBenturan')->name('manage.benturan');
 });
 
 

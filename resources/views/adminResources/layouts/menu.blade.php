@@ -22,16 +22,16 @@
             </div>
         </li> <!--profil-->
         <li class="active">
-            <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Dashboard</span></a>
+            <a href="{{ route('admin.dashboard') }}"><i class="fa fa-money"></i> <span class="nav-label">Dashboard</span></a>
         </li>
         <li>
-            <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Korupsi</span></a>
+            <a href="{{ route('manage.korupsi') }}"><i class="fa fa-money"></i> <span class="nav-label">Korupsi</span></a>
         </li> <!--actived menu-->
         <li>
-            <a href="#"><i class="fa fa-briefcase"></i> <span class="nav-label">Gratifikasi</span></a>
+            <a href="{{ route('manage.gratifikasi') }}"><i class="fa fa-briefcase"></i> <span class="nav-label">Gratifikasi</span></a>
         </li>
         <li>
-            <a href="#"><i class="fa fa-times"></i> <span class="nav-label">Benturan Kepentingan</span></a>
+            <a href="{{ route('manage.benturan') }}"><i class="fa fa-times"></i> <span class="nav-label">Benturan Kepentingan</span></a>
         </li>
 
     </ul>
