@@ -26,9 +26,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $post = Form::all();
-        $grat = FormGratifikasi::all();
-        $ben = FormBenturan::all();
+
+        $post = Form::all()->sortByDesc('created_at');
+        $grat = FormGratifikasi::all()->sortByDesc('created_at');
+        $ben = FormBenturan::all()->sortByDesc('created_at');
 
         return view('adminResources.dashboard', compact('post', 'grat', 'ben'));
     }

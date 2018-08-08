@@ -13,12 +13,12 @@
 
             </div>
             @foreach($post as $p)
-                <ol>
+
                 <div class="social-feed-box">
 
                     <div class="social-avatar">
                         <a href="" class="pull-left">
-                            <img alt="image" src="{{ asset('adminpublic/img/a6.jpg') }}">
+                            <img alt="image" src="{{ asset('adminpublic/img/Admin.png') }}">
                         </a>
                         <div class="media-body">
                             <a href="#">
@@ -37,7 +37,7 @@
                     </p>
 
                 </div>
-                </ol>
+
             @endforeach
 
 
@@ -60,7 +60,7 @@
 
                     <div class="social-avatar">
                         <a href="" class="pull-left">
-                            <img alt="image" src="{{ asset('adminpublic/img/a6.jpg') }}">
+                            <img alt="image" src="{{ asset('adminpublic/img/Admin.png') }}">
                         </a>
                         <div class="media-body">
                             <a href="#">
@@ -69,7 +69,9 @@
                             <small class="text-muted">{{ $g->created_at }}</small>
                         </div>
                     </div>
-                    <img class="social-body" src="{{ $g->bukti }}">
+                    <img class="img-responsive" style="padding-top: 10px; padding-bottom: 10px; padding-left: 5px;padding-right: 5px" src="{{ asset('storage/bukti/' .$g->bukti) }}">
+
+                    </img>
                     <p>
 
                         {{ $g->cerita }}
@@ -99,7 +101,7 @@
 
                     <div class="social-avatar">
                         <a href="" class="pull-left">
-                            <img alt="image" src="{{ asset('adminpublic/img/a6.jpg') }}">
+                            <img alt="image" src="{{ asset('adminpublic/img/Admin.png') }}">
                         </a>
                         <div class="media-body">
                             <a href="#">
@@ -108,7 +110,9 @@
                             <small class="text-muted">{{ $b->created_at }}</small>
                         </div>
                     </div>
-                    <img class="social-body" src="storage/bukti/{{ $b->bukti }}">
+                    <img class="img-responsive" style="padding-top: 10px; padding-bottom: 10px; padding-left: 5px;padding-right: 5px" src="{{ asset('storage/bukti/' .$b->bukti) }}">
+
+                    </img>
                     <p>
 
                         {{ $b->cerita }}
