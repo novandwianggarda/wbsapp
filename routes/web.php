@@ -10,18 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/wbs', 'WbsController@index');
+Route::get('/tes', function (){
+ return view('index');
+});
+Route::get('/', 'WbsController@index');
+Route::get('/home', 'WbsController@home');
 /*Route::get('/','HomeController@home');*/
-Route::get('/lapor_korupsi', 'KorupsiController@laporKorupsi');
-Route::get('/lapor_gratifikasi', 'GratifikasiController@laporGratifikasi');
-Route::get('/lapor_benturan_kepentingan', 'BenturanKepentinganController@laporBenturan');
+Route::get('/lapor_korupsi', 'WbsController@home');
+Route::get('/lapor_gratifikasi', 'WbsController@gratifikasi');
+Route::get('/lapor_benturan_kepentingan', 'WbsController@benturan');
 Route::get('/form', 'FormKorupsiController@create');
 
 Route::resource('post_korupsi', 'FormKorupsiController');
 Route::resource('post_gratifikasi', 'FormGratifikasiController');
 Route::resource('post_benturan_kepentingan', 'FormBenturanController');
 
+Route::get('/json', function(){
+    return view('json');
+});
 
 Auth::routes();
 

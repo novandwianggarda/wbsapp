@@ -1,23 +1,11 @@
-@extends('master.master')
+@extends('master.master_new')
 
 @section('header')
     @include('layouts.header')
 @endsection
 
-@section('front')
-    @include('layouts.front')
-@endsection
-
-@section('detail_laporan')
-    @include('layouts.detailLaporan')
-@endsection
-
 @section('form')
-    @include('layouts.form')
-@endsection
-
-@section('lapor')
-    @include('layouts.lapor')
+    @include('form.createKorupsi')
 @endsection
 
 @section('sikil')

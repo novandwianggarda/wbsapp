@@ -14,7 +14,7 @@ class FormBenturanController extends Controller
      */
     public function index()
     {
-        return view('lapor.lapor_benturan');
+        return view('benturan');
     }
 
     /**

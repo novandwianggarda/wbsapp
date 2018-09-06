@@ -1,55 +1,41 @@
-<div class="split-features" id="wbs">
-    <div class="col-md-6 nopadding">
-        <div class="split-image"> <img class="img-responsive wow fadeIn" src="{{asset('img/app_image.png')}}" alt="Image" /> </div>
-    </div>
-    <div class="col-md-6 nopadding">
-        <div class="split-content">
-            <h1 class="wow fadeInUp">Keep your body fit & strong to <br>
-                live longer</h1>
-            <p class="wow fadeInUp"> Pellentesque eget dolor gravida, tempus purus ac, ultricies mauris. Etiam est nisl, molestie sed egestas bibendum, varius eu diam. Suspendisse est metus, ultrices sit amet dolor in, rhoncus malesuada mi.</p>
-            <ul class="wow fadeInUp">
-                <li>Nulla ornare purus non consequat ultricies.</li>
-                <li>Etiam est nisl, molestie sed egestas bibendum</li>
-                <li>Aliquam vel euismod elit, sed suscipit est.</li>
-                <li>Curabitur egestas justo neque viverra vel. </li>
-            </ul>
+<section id='about' class="s-about">
+
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead subhead--dark">Hello There</h3>
+            <h1 class="display-1 display-1--light">We Are Glint</h1>
         </div>
-    </div>
-</div>
-<!-- Split Feature2 Section -->
-<div class="split-features2">
-    <div class="col-md-6 nopadding">
-        <div class="split-content second">
-            <h1 class="wow fadeInUp">See The Results and Feel the difference</h1>
-            <p class="wow fadeInUp"> Pellentesque eget dolor gravida, tempus purus ac, ultricies mauris. Etiam est nisl, molestie sed egestas bibendum, varius eu diam. Suspendisse est metus, ultrices sit amet dolor in, rhoncus malesuada mi.</p>
-            <ul class="wow fadeInUp">
-                <li>Nulla ornare purus non consequat ultricies.</li>
-                <li>Etiam est nisl, molestie sed egestas bibendum</li>
-                <li>Aliquam vel euismod elit, sed suscipit est.</li>
-                <li>Curabitur egestas justo neque viverra vel. </li>
-            </ul>
+    </div> <!-- end section-header -->
+
+    <div class="row about-desc" data-aos="fade-up">
+        <div class="col-full">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+            </p>
         </div>
-    </div>
-    <div class="col-md-6 nopadding">
-        <div class="split-image"> <img class="img-responsive wow fadeIn" src="{{asset('img/app_image2.png')}}" alt="Image" /> </div>
-    </div>
-</div>
-<!-- Split Feature3 Section -->
-<div class="split-features">
-    <div class="col-md-6 nopadding">
-        <div class="split-image"> <img class="img-responsive wow fadeIn" src="{{asset('img/gym-3.jpg')}}" alt="Image" /> </div>
-    </div>
-    <div class="col-md-6 nopadding">
-        <div class="split-content">
-            <h1 class="wow fadeInUp">Command Performance You<br>
-                deserve it</h1>
-            <p class="wow fadeInUp"> Pellentesque eget dolor gravida, tempus purus ac, ultricies mauris. Etiam est nisl, molestie sed egestas bibendum, varius eu diam. Suspendisse est metus, ultrices sit amet dolor in, rhoncus malesuada mi.</p>
-            <ul class="wow fadeInUp">
-                <li>Nulla ornare purus non consequat ultricies.</li>
-                <li>Etiam est nisl, molestie sed egestas bibendum</li>
-                <li>Aliquam vel euismod elit, sed suscipit est.</li>
-                <li>Curabitur egestas justo neque viverra vel. </li>
-            </ul>
+    </div> <!-- end about-desc -->
+
+    <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+        <div class="col-block stats__col ">
+            <div class="stats__count">127</div>
+            <h5>Awards Received</h5>
         </div>
-    </div>
-</div>
+        <div class="col-block stats__col">
+            <div class="stats__count">1505</div>
+            <h5>Cups of Coffee</h5>
+        </div>
+        <div class="col-block stats__col">
+            <div class="stats__count">109</div>
+            <h5>Projects Completed</h5>
+        </div>
+        <div class="col-block stats__col">
+            <div class="stats__count">102</div>
+            <h5>Happy Clients</h5>
+        </div>
+
+    </div> <!-- end about-stats -->
+
+    <div class="about__line"></div>
+
+</section>

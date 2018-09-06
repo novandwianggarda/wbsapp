@@ -15,7 +15,7 @@ class FormKorupsiController extends Controller
      */
     public function index()
     {
-        return view('lapor.lapor_korupsi');
+        return view('home');
     }
 
     /**

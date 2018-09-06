@@ -13,7 +13,7 @@ class FormGratifikasiController extends Controller
      */
     public function index()
     {
-        return view('lapor.lapor_gratifikasi');
+        return view('gratifikasi');
     }
 
     /**
