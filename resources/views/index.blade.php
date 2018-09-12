@@ -23,7 +23,7 @@
     <p> <a data-toggle="tooltip" title="Laporkan Korupsi !" href="/post_korupsi"  target="blank">Korupsi</a> | <a data-toggle="tooltip" title="Laporkan Gratifikasi !" href="/post_gratifikasi" target="blank">Gratifikasi</a> | <a data-toggle="tooltip" title="Laporkan Benturan Kepentingan !" href="/post_benturan_kepentingan" target="blank">Benturan Kepentingan</a>  </p>
 </div>
 <div id="credits">
-    <p> <a href="https://dpmptsp.jatengprov.go.id/"  target="blank">DPMPTSP Prov Jateng</a> | <a href="https://dpmptsp.jatengprov.go.id" target="blank">WBS</a></p>
+    <p> <a href="https://dpmptsp.jatengprov.go.id/"  target="blank">DPMPTSP Prov Jateng</a> | WBS | 2018</p>
 </div>
 
 
