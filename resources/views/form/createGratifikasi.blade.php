@@ -77,10 +77,7 @@
     <div class="contact__line"></div>
 
     <div class="row section-header" data-aos="fade-up">
-        <div class="col-full">
-            <h3 class="subhead">Laporkan Pelaku Gratifikasi</h3>
-            <h1 class="display-2 display-2--light">Wes pokoke lapor sek, jan telo tenan</h1>
-        </div>
+        <img src="{{asset('img/front/logo2.png')}}" width="20%" height="auto">
     </div>
 
     <div class="row contact-content" data-aos="fade-up">
@@ -109,7 +106,9 @@
                     {{Form::textarea('cerita', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'cerita'])}}
                 </div>
                 <div class="form-field">
-                    {{Form::file('bukti', ['multiple'=>'multiple'])}}
+                    <span class="btn btn-primary btn-file">
+                        Lampirkan Bukti | .jpg .doc .pdf{{Form::file('bukti', ['multiple'=>'multiple', 'type' => 'file'])}}
+                    </span>
                 </div>
                 <div class="form-field">
                     {{Form::submit('Submit', ['class'=>'full-width btn--primary'])}}
@@ -140,13 +139,10 @@
 
         <div class="contact-secondary">
             <div class="contact-info">
-
-                <h3 class="h6 hide-on-fullwidth">Penjelasan Opo Pie ngono</h3>
-
                 <div class="cinfo">
                     <h5>Gratifikasi</h5>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Pemberian dalam arti luas, yakni meliputi pemberian uang, barang, rabat (discount), komisi, pinjaman tanpa bunga, tiket perjalanan, fasilitas penginapan, perjalanan wisata, pengobatan cuma-cuma, dan fasilitas lainnya. Gratifikasi tersebut baik yang diterima di dalam negeri maupun di luar negeri dan yang dilakukan dengan menggunakan sarana elektronik atau tanpa sarana elektronik.
                     </p>
                 </div>
 

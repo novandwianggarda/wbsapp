@@ -20,7 +20,6 @@ Route::get('/lapor_korupsi', 'WbsController@home');
 Route::get('/lapor_gratifikasi', 'WbsController@gratifikasi');
 Route::get('/lapor_benturan_kepentingan', 'WbsController@benturan');
 Route::get('/form', 'FormKorupsiController@create');
-
 Route::resource('post_korupsi', 'FormKorupsiController');
 Route::resource('post_gratifikasi', 'FormGratifikasiController');
 Route::resource('post_benturan_kepentingan', 'FormBenturanController');

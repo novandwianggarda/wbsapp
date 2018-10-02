@@ -23,7 +23,7 @@ body{
     top:60%;
     text-align:center;
     transform:translate(-50%, -50%);
-    color:#DBAB4C;
+    color:#c90606;
     font-size:5em;
 }
 .title{
@@ -41,7 +41,7 @@ body{
     top:50%;
     text-align:center;
     transform:translate(-50%, -50%);
-    color:#DBAB4C;
+    color:#c90606;
     font-size:4em;
 }
 
@@ -85,6 +85,6 @@ body{
 }
 
 #credits a:hover {
-    color:#DBAB4C;
+    color:#c90606;
 }
 

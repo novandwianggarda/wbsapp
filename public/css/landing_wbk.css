@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Rakkas');
+@import url('https://fonts.googleapis.com/css?family=K2D|Roboto:900');
 
 body{
     background-color:#232728;
     overflow:hidden;
-    font-family:'Rakkas';
+    font-family:'K2D';
 }
 #pixiCanvas{
     position:absolute;
@@ -26,7 +26,7 @@ body{
     text-align:center;
     font-family:'Rakkas', sans-serif;
     transform:translate(-50%, -50%);
-    color:#DBAB4C;
+    color:#c90606;
     font-size:7em;
 }
 
@@ -47,7 +47,7 @@ body{
     text-align:center;
     font-family:'Rakkas', sans-serif;
     transform:translate(-50%, -50%);
-    color:#DBAB4C;
+    color:#c90606;
     font-size:1.5em;
 }
 
@@ -92,7 +92,7 @@ body{
 }
 
 #credits a:hover {
-    color:#DBAB4C;
+    color:#c90606;
 }
 #content{
     position:absolute;
@@ -113,6 +113,6 @@ body{
 }
 
 #content a:hover {
-    color:#DBAB4C;
+    color: #c90606;
 }
 
