@@ -30,8 +30,10 @@ class AdminController extends Controller
         $post = Form::all()->sortByDesc('created_at');
         $grat = FormGratifikasi::all()->sortByDesc('created_at');
         $ben = FormBenturan::all()->sortByDesc('created_at');
-
-        return view('adminResources.dashboard', compact('post', 'grat', 'ben'));
+        $itungKor = Form::count();
+        $itungGrat = Form::count();
+        $itungBen = Form::count();
+        return view('adminResources.dashboard', compact('post', 'grat', 'ben', 'itungKor', 'itungGrat', 'itungBen'));
     }
 
     public function back(){

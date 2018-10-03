@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>WBS | DPMPTSP Prov.Jateng</title>
-    <link rel="icon" type="gif/ico" href="{{asset('img/prov.gif')}}" />
+    <link rel="icon" type="gif/ico" href="{{asset('img/logoPTSP.png')}}" />
     <link rel="stylesheet" href="{{asset('css/landing_wbk.css')}}" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>--}}
     <script src="{{asset('js/TweenMax.min.js')}}"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -36,12 +36,12 @@
             transform:translate(-50%, -50%);
             color:#f29a0e;
             font-size:8em;
-            font-family: K2D;
+            font-family: 'K2D';
         }
         .subtitle{
             position:absolute;
             left:50%;
-            top:50%;
+            top:52%;
             text-align:center;
             font-family:'K2D', sans-serif;
             transform:translate(-50%, -50%);
@@ -117,5 +117,5 @@
 
 </body>
 
-    <script src="{{asset('js/js.js')}}"></script>
+    {{--<script src="{{asset('js/js.js')}}"></script>--}}
 </html>

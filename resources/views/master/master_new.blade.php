@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WBS | DPMPTSP Prov. Jateng</title>
-    <link rel="icon" type="gif/ico" href="{{asset('img/prov.gif')}}" />
+    <link rel="icon" type="gif/ico" href="{{asset('img/logoPTSP.png')}}" />
     <meta name="description" content="WBS DPMPTSP Prov Jateng">
     <meta name="author" content="DPMPTSP Prov Jateng | 2018">
 

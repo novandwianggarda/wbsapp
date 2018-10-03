@@ -3,16 +3,11 @@
 
         <div class="col-lg-4">
 
-            <div class="ibox">
-                <div class="ibox-content text-center">
+            @include('adminResources.content.pages.korupsi')
 
-                    <h3 class="m-b-xxs">Daftar Laporan Korupsi</h3>
-                    <small>Ini adalah MANUSIA MANUSIA TERCYDUK</small>
-
-                </div>
-
-            </div>
             @foreach($post as $p)
+
+
 
                 <div class="social-feed-box">
 
@@ -52,10 +47,12 @@
                     <small>MENUNGSO yang tercyduk</small>
 
                 </div>
-
+                @include('adminResources.content.pages.gratifikasi')
             </div>
 
             @foreach($grat as $g)
+
+
                 <div class="social-feed-box">
 
                     <div class="social-avatar">
@@ -93,7 +90,7 @@
                     <small>MENUNGSO Egois yang tercyduk</small>
 
                 </div>
-
+                @include('adminResources.content.pages.benturan')
             </div>
 
             @foreach($ben as $b)
