@@ -36,8 +36,10 @@ class FormGratifikasiController extends Controller
     {
         $this->validate($request, [
             'nama_pelaku' => 'required',
-            'cerita' => 'required',
-            'bukti' => 'required|mimes:jpeg,png,jpg,zip,pdf,docx,doc|nullable|max:10000'
+            'deskripsi' => 'required',
+            'bukti' => 'required|mimes:jpeg,png,jpg,zip,pdf,docx,doc|nullable|max:10000',
+            'no_telp' => 'required',
+            'email' => 'required|email'
         ]);
 
         if ($request->hasFile('bukti')) {
@@ -59,7 +61,9 @@ class FormGratifikasiController extends Controller
         $post->nama_pelaku = $request->input('nama_pelaku');
         $post->nip_pelaku = $request->input('nip_pelaku');
         $post->jabatan = $request->input('jabatan');
-        $post->cerita = $request->input('cerita');
+        $post->deskripsi = $request->input('deskripsi');
+        $post->no_telp = $request->input('no_telp');
+        $post->email = $request->input('email');
         $post->bukti = $fileNameToStore;
         //dd($post);
         $post->save();

@@ -35,13 +35,19 @@
                     {{Form::text('nip_pelaku', '', ['class' => 'full-width', 'placeholder' => 'NIP'])}}
                 </div>
                 <div class="form-field">
-                    {{Form::label('cerita', 'cerita')}}
-                    {{Form::textarea('cerita', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'cerita'])}}
+                    {{Form::label('no_telp', 'Nomor Telepon')}}
+                    {{Form::text('no_telp', '', ['class' => 'full-width', 'placeholder' => 'Nomor Telepon'])}}
                 </div>
                 <div class="form-field">
-                    <span class="btn btn-primary btn-file">
-                        Lampirkan Bukti | .jpg .doc .pdf{{Form::file('bukti', ['multiple'=>'multiple', 'type' => 'file'])}}
-                    </span>
+                    {{Form::label('email', 'Email')}}
+                    {{Form::text('email', '', ['class' => 'full-width', 'placeholder' => 'Email'])}}
+                </div>
+                <div class="form-field">
+                    {{Form::label('deskripsi', 'deskripsi')}}
+                    {{Form::textarea('deskripsi', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Deskripsi'])}}
+                </div>
+                <div class="form-field">
+                        {{Form::file('bukti', ['multiple'=>'multiple', 'type' => 'file', 'class' => 'full-width'])}}
                 </div>
                 <div class="form-field">
                     {{Form::submit('Submit', ['class'=>'full-width btn--primary'])}}
