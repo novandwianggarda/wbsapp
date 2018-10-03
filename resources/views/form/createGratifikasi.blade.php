@@ -103,12 +103,12 @@
                 </div>
                 <div class="form-field">
                     {{Form::label('cerita', 'cerita')}}
-                    {{Form::textarea('cerita', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'cerita'])}}
+                    {{Form::textarea('deskripsi', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'deskripsi'])}}
                 </div>
                 <div class="form-field">
-                    <span class="btn btn-primary btn-file">
-                        Lampirkan Bukti | .jpg .doc .pdf{{Form::file('bukti', ['multiple'=>'multiple', 'type' => 'file'])}}
-                    </span>
+
+                        {{Form::file('bukti', ['multiple'=>'multiple', 'type' => 'file', 'placeholder' => 'Lampirkan Bukti | .jpg .doc .pdf'])}}
+
                 </div>
                 <div class="form-field">
                     {{Form::submit('Submit', ['class'=>'full-width btn--primary'])}}
