@@ -40,7 +40,9 @@ class FormBenturanController extends Controller
             'deskripsi' => 'required',
             'bukti' => 'required|mimes:jpeg,png,jpg,zip,pdf,docx,doc|nullable|max:10000',
             'no_telp' => 'required',
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'status' => 'required|in:ex,in',
+            'disclaimer' => 'required|in:yes'
         ]);
 
         if ($request->hasFile('bukti')) {
@@ -63,8 +65,11 @@ class FormBenturanController extends Controller
         $post->nip_pelaku = $request->input('nip_pelaku');
         $post->jabatan = $request->input('jabatan');
         $post->deskripsi = $request->input('deskripsi');
+        //
+        $post->nama = $request->input('nama');
         $post->no_telp = $request->input('no_telp');
         $post->email = $request->input('email');
+        $post->status = $request->input('status');
         $post->bukti = $fileNameToStore;
         //dd($post);
         $post->save();

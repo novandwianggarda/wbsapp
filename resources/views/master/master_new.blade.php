@@ -1,3 +1,9 @@
+<?php
+if (isset($_POST['nama_pelaku'])){
+    echo "<pre>";print_r($_POST);
+}
+?>
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -16,12 +22,20 @@
 
     <!-- CSS
     ================================================== -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/front/base.css')}}">
     <link rel="stylesheet" href="{{asset('css/front/vendor.css')}}">
     <link rel="stylesheet" href="{{asset('css/front/main.css')}}">
+    {{--seko admin--}}
+    <link rel="stylesheet" href="{{asset('adminpublic/css/plugins/iCheck/custom.css')}}">
+    <link rel="stylesheet" href="{{asset('adminpublic/css/plugins/steps/jquery.steps.css')}}">
+    <link rel="stylesheet" href="{{asset('adminpublic/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('adminpublic/css/style.css')}}">
 
     <!-- script
     ================================================== -->
+
+
     <script src="{{asset('js/front/modernizr.js')}}"></script>
     <script src="{{asset('js/front/pace.min.js')}}"></script>
 
@@ -53,7 +67,15 @@
 <body id="top">
     <!-- header
     ================================================== -->
-
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     @yield('header')
 
 
@@ -61,6 +83,7 @@
     ================================================== -->
 
     @yield('form')
+
 
 
     <!-- preloader
@@ -76,10 +99,111 @@
             </div>
         </div>
     </div>
+
+    @yield('sikil')
     <!-- Java Script
         ================================================== -->
+    <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/front/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/front/plugins.js')}}"></script>
     <script src="{{asset('js/front/main.js')}}"></script>
+    <script src="{{asset('js/validate.js')}}"></script>
+
+    <script src="{{asset('adminpublic/js/plugins/steps/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('adminpublic/js/plugins/validate/jquery.validate.min.js')}}"></script>
+
+
+    <script>
+        $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                    /*if (currentIndex === 3) { //if last step
+                        //remove default #finish button
+                        $('#form').find('a[href="#finish"]').remove();
+                       /!* //append a submit type button
+                        $('#form .actions li:last-child').append('<button type="submit" id="submit" value="submit" class="btn-large"><span class="fa fa-chevron-right"></span></button>');*!/
+                    }*/
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+                    /*console.log(form);*/
+                    // Submit form input
+                    form.submit();
+                    /*console.log(form.serialize());*/
+                }
+            }).validate({
+                errorPlacement: function (error, element)
+                {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        required: "#status"
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

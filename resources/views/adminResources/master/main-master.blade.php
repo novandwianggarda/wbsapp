@@ -12,6 +12,7 @@
     <link href="{{ asset('adminpublic/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('adminpublic/css/style.css') }}" rel="stylesheet">
 
+
 </head>
 
 <body>

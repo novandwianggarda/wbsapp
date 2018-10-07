@@ -62,8 +62,11 @@ class FormGratifikasiController extends Controller
         $post->nip_pelaku = $request->input('nip_pelaku');
         $post->jabatan = $request->input('jabatan');
         $post->deskripsi = $request->input('deskripsi');
+        //
+        $post->nama = $request->input('nama');
         $post->no_telp = $request->input('no_telp');
         $post->email = $request->input('email');
+        $post->status = $request->input('status');
         $post->bukti = $fileNameToStore;
         //dd($post);
         $post->save();

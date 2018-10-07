@@ -13,12 +13,12 @@ class CreateFormTeradusTable extends Migration
      */
     public function up()
     {
-        Schema::create('form_teradu', function (Blueprint $table) {
+        Schema::create('form_pengadu', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_teradu');
-            $table->string('nip_teradu');
-            $table->string('golongan');
-            $table->string('jabatan');
+            $table->string('nama_pengadu');
+            $table->string('no_telp_pengadu');
+            $table->string('email_pengadu');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateFormTeradusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_teradu');
+        Schema::dropIfExists('form_pengadu');
     }
 }
